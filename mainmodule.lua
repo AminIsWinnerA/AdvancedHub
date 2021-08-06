@@ -199,8 +199,8 @@ runService:BindToRenderStep(shared._id, 1, function()
 end)
 
 local window = library:CreateWindow('Advanced Hub') do
-    local folder = window:AddFolder('Autoplayer') do
-        folder:AddToggle({ text = 'Autoplayer', flag = 'autoPlayer' })
+    local folder = window:AddFolder('Main Kit') do
+        folder:AddToggle({ text = 'Mode Toggle', flag = 'autoPlayer' })
         folder:AddList({ text = 'Autoplayer mode', flag = 'autoPlayerMode', values = { 'Chances', 'Manual' } })
 
         folder:AddSlider({ text = 'Sick %', flag = 'sickChance', min = 0, max = 100, value = 100 })
