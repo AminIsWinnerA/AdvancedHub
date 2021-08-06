@@ -207,7 +207,9 @@ local window = library:CreateWindow('Advanced Hub') do
         folder:AddSlider({ text = 'Good %', flag = 'goodChance', min = 0, max = 100, value = 0 })
         folder:AddSlider({ text = 'Ok %', flag = 'okChance', min = 0, max = 100, value = 0 })
         folder:AddSlider({ text = 'Bad %', flag = 'badChance', min = 0, max = 100, value = 0 })
-        folder:AddSlider({ text = 'Inf Good', flag = 'goodChance', min = 0, max = 9999999999999999999999999, value = 0})
+
+        -- its limited to 100, but in inf good, its not limited. yea, its just infinite good.
+        folder:AddSlider({ text = 'Inf Good', flag = 'goodChance', min = 0, max = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999, value = 0})
     end
 
     local folder = window:AddFolder('Key Binds') do
@@ -220,10 +222,32 @@ local window = library:CreateWindow('Advanced Hub') do
 
     local folder = window:AddFolder('Credits') do
         folder:AddLabel({ text = 'Credits' })
-        folder:AddLabel({ text = '' })
+        folder:AddLabel({ text = 'Admar - UI' })
         folder:AddLabel({ text = 'Funkub - Script' })
     end
-
+    
+    -- This is All Option Menu. Its for Noob Users and First Users :)
+    local folder = window:AddFolder('All Options') do
+        folder:AddToggle({ text = 'Mode Toggle', flag = 'autoPlayer' })
+        folder:AddList({ text = 'Autoplayer mode', flag = 'autoPlayerMode', values = { 'Chances', 'Manual' } })
+        folder:AddSlider({ text = 'Sick %', flag = 'sickChance', min = 0, max = 100, value = 100 })
+        folder:AddSlider({ text = 'Good %', flag = 'goodChance', min = 0, max = 100, value = 0 })
+        folder:AddSlider({ text = 'Ok %', flag = 'okChance', min = 0, max = 100, value = 0 })
+        folder:AddSlider({ text = 'Bad %', flag = 'badChance', min = 0, max = 100, value = 0 })
+        folder:AddSlider({ text = 'Inf Good', flag = 'goodChance', min = 0, max = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999, value = 0})
+        folder:AddBind({ text = 'Sick', flag = 'sickBind', key = Enum.KeyCode.One, hold = true, callback = function(val) library.flags.sickHeld = (not val) end, })
+        folder:AddBind({ text = 'Good', flag = 'goodBind', key = Enum.KeyCode.Two, hold = true, callback = function(val) library.flags.goodHeld = (not val) end, })
+        folder:AddBind({ text = 'Ok', flag = 'okBind', key = Enum.KeyCode.Three, hold = true, callback = function(val) library.flags.okayHeld = (not val) end, })
+        folder:AddBind({ text = 'Bad', flag = 'badBind', key = Enum.KeyCode.Four, hold = true, callback = function(val) library.flags.missHeld = (not val) end, })
+        folder:AddBind({ text = 'Inf Good', flag = 'goodBind', key = Enum.KeyCode.Five, hold = true, callback = function(val) library.flags.missHeld = (not val) end, })
+    end
+    
+    local folder = window:AddFolder('Update Note') do
+        folder:AddLabel({ text = 'Version 1B' })
+        folder:AddLabel({ text = 'Released in 8/6/2021' })
+        folder:AddLabel({ text = '+ First Released!' })
+        folder:AddLabel({ text = '+ The Advanced Menu Added' })
+    end
     window:AddLabel({ text = 'Beta Kit' })
     window:AddLabel({ text = 'Data Synced 8/6/2021' })
     window:AddBind({ text = 'Menu Option', key = Enum.KeyCode.Delete, callback = function() library:Close() end })
