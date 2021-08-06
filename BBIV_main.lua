@@ -16,7 +16,7 @@ function GiveMoney(Money)
     getsenv(GetScript()).pstats.money = getsenv(GetScript()).pstats.money + Money
     getsenv(GetScript()).gui.Data.Money.Text = getsenv(GetScript()).Comma(getsenv(GetScript()).pstats.money)
 end
-local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AminIsWinnerA/FunkyFriday/main/MainLibrary",true))()
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AminIsWinnerA/AdvancedHub/main/MainLibrary",true))()
 main = lib:Window()
 MainWindow = main:Tab('Broken Bones IV')
 MainWindow:Button('Give 10M Money',function()
