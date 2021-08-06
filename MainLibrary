@@ -1,4 +1,4 @@
--- In Broken Bones IV, We're Using Dark Hub Library.
+-- We're Using Dark Hub Library (I think it will not supported in Other Games lol)
 
 if game.CoreGui:FindFirstChild("MarkBeatsIsGay") then
     game.CoreGui.MarkBeatsIsGay:Destroy()
