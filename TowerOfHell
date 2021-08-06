@@ -2,7 +2,7 @@ y = game:GetService("Players").LocalPlayer.PlayerScripts.LocalScript
 getsenv(y).kick = function() return nil end
 getsenv(y).kick()
 
-local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AminIsWinnerA/FunkyFriday/main/MainLibrary"))()
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AminIsWinnerA/AdvancedHub/main/MainLibrary"))()
 main = lib:Window()
 local MainWindow = main:Tab('Main')
 TimeAlive = 0
