@@ -1,0 +1,11 @@
+if game.GameId == 1962086868 then
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/AminIsWinnerA/AdvancedHub/main/TowerOfHell'), true))()
+end
+
+if game.GameId == 6447798030 then
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/AminIsWinnerA/AdvancedHub/main/FunkyFriday'), true))()
+end
+
+if game.GameId == 2551991523 then
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/AminIsWinnerA/FunkyFriday/main/BBIV_main.lua'), true))()
+end
