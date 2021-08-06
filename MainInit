@@ -1,3 +1,5 @@
+-- it didnt work so make sure to select hack you need from advanced hub library.
+
 if game.GameId == 1962086868 then
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/AminIsWinnerA/AdvancedHub/main/TowerOfHell'), true))()
 end
