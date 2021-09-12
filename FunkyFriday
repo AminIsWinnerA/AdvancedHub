@@ -175,7 +175,7 @@ local window = library:CreateWindow('Advanced Hub') do
         folder:AddToggle({ text = 'Mode Toggle', flag = 'autoPlayer' })
         folder:AddList({ text = 'Autoplayer mode', flag = 'autoPlayerMode', values = { 'Chances', 'Manual' } })
 
-        folder:AddSlider({ text = 'Sick %', flag = 'sickChance', min = 0, max = 99999999999, value = 99999999999 })
+        folder:AddSlider({ text = 'Sick %', flag = 'sickChance', min = 0, max = 100, value = 100 })
         folder:AddSlider({ text = 'Good %', flag = 'goodChance', min = 0, max = 100, value = 0 })
         folder:AddSlider({ text = 'Ok %', flag = 'okChance', min = 0, max = 100, value = 0 })
         folder:AddSlider({ text = 'Bad %', flag = 'badChance', min = 0, max = 100, value = 0 })
