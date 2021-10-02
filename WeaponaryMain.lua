@@ -1,15 +1,15 @@
 
 DarkHub_Client = {SavedSettings = false}
-if isfolder and makefolder and not isfolder('DarkHub') then
-    makefolder('DarkHub')
+if isfolder and makefolder and not isfolder('AdvancedHub') then
+    makefolder('AdvancedHub')
     DarkHub_Client.SaveSettings = true
-    if isfile('DarkHub/DarkHub_'..tostring(Game.PlaceId)..'.DARKHUB') then
+    if isfile('AdvancedHub/AdvancedHub_'..tostring(Game.PlaceId)..'.AH') then
         DarkHub_Client.SavedSettings = true
         DarkHub_Client.GameSettings = game:GetService('HttpService'):JSONDecode(readfile('DarkHub/DarkHub_'..tostring(Game.PlaceId)..'.DARKHUB'))
     end
-elseif isfolder('DarkHub') then
+elseif isfolder('AdvancedHub') then
     DarkHub_Client.SaveSettings = true
-    if isfile('DarkHub/DarkHub_'..tostring(Game.PlaceId)..'.DARKHUB') then
+    if isfile('AdvancedHub/AdvancedHub_'..tostring(Game.PlaceId)..'.AH') then
         DarkHub_Client.SavedSettings = true
         DarkHub_Client.GameSettings = game:GetService('HttpService'):JSONDecode(readfile('DarkHub/DarkHub_'..tostring(Game.PlaceId)..'.DARKHUB'))
     end
